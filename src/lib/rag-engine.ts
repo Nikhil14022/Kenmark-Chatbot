@@ -17,7 +17,7 @@ export async function getAiResponse(userQuery: string, history: { role: string; 
     console.log('RAG_ENGINE: Extracted keywords:', keywords);
 
     // 2. Retrieve relevant knowledge from MongoDB using broader search
-    let relevantKnowledge = [];
+    let relevantKnowledge: any[] = [];
 
     if (keywords.length > 0) {
         // Build OR conditions for each keyword across all fields
